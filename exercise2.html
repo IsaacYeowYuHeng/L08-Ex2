@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullPage.js Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slide {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="fullpage">
+    <div class="section">
+        <h1>Section 1</h1>
+    </div>
+    <div class="section">
+        <h1>Section 2</h1>
+    </div>
+    <div class="section">
+        <div class="slide">
+            <h2>Slide 1</h2>
+            <img src="img/vector-stop-dont-talk-to-me.gif" alt="Image 1">
+        </div>
+        <div class="slide">
+            <h2>Slide 2</h2>
+            <img src="img/chipi-chapa.gif" alt="Image 2">
+        </div>
+        <div class="slide">
+            <h2>Slide 3</h2>
+            <img src="img/chad.png" alt="Image 3">
+        </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
+<script>
+    new fullpage('#fullpage', {
+        sectionsColor: ['#1BBC9B', '#4BBFC3', '#7BAABE'],
+        anchors: ['section1', 'section2', 'section3'],
+        menu: '#menu',
+        afterLoad: function (origin, destination, direction) {
+            // Add any custom code after each section is loaded
+        }
+    });
+</script>
+
+</body>
+</html>
